@@ -165,8 +165,7 @@ Hardware-software system for remote home appliance control via Android app and I
 - 📊 **Infosys Springboard** — Power BI & Data Analytics Foundation
 - ☁️ **AWS Academy** — Cloud Foundations
 - 📡 **NPTEL** — Distributed Systems (Gold + Elite)
-- 🥉 **3rd Prize** — Augmented Reality Paper Presentation @ Kongunadu Engineering College, Trichy
-- 🏅 **5th Prize** — IoT Smart Home Project @ SPCon23, Muthayammal Engineering College
+
 
 <br/>
 
