@@ -17,13 +17,13 @@
 ### 👋 Hey there! I'm Harippriya
 
 A Computer Science Engineer with a deep love for **data, patterns, and what they reveal**.  
-I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Biology** — curious about systems at every scale, from environmental sensors to microbial genomes.
+I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Biology** - curious about systems at every scale, from environmental sensors to microbial genomes.
 
 - 🔬 Currently working on **novel species identification from extreme environments** using genomics & ML
 - 📊 Experienced in building end-to-end **data pipelines and interactive dashboards**
-- 🌱 Always learning — recently explored **deep learning, phylogenetics, and automated bioinformatics workflows**
+- 🌱 Always learning - recently explored **deep learning, phylogenetics, and automated bioinformatics workflows**
 - 🎯 Actively looking for opportunities in **Data Science / Analytics / ML Engineering**
-- ⚡ Fun fact: I can find a story in any dataset — give me one and let's see!
+- ⚡ Fun fact: I can find a story in any dataset - give me one and let's see!
 
 <br clear="right"/>
 
@@ -90,7 +90,7 @@ Automated bioinformatics pipeline for identifying and characterizing novel micro
 </td>
 <td width="50%">
 
-### 🔬 Skin Cancer Detection — Deep Learning
+### 🔬 Skin Cancer Detection - Deep Learning
 CNN-based system to classify dermatologic images as Melanoma / Non-Melanoma with **95.4% accuracy**. Analyzed color, texture, size & perimeter features using Flask for deployment.
 
 `Python` `CNN` `TensorFlow` `Flask`
@@ -158,13 +158,13 @@ Hardware-software system for remote home appliance control via Android app and I
 
 <br/>
 
-- 🌟 **NPTEL Discipline Star 2024** — Academic Excellence
-- 🤖 **NVIDIA** — Getting Started with AI on Jetson Nano
-- ☁️ **Google Professional Certificate** — Business Intelligence & Python
-- ☕ **Wipro TalentNext** — Java Full Stack
-- 📊 **Infosys Springboard** — Power BI & Data Analytics Foundation
-- ☁️ **AWS Academy** — Cloud Foundations
-- 📡 **NPTEL** — Distributed Systems (Gold + Elite)
+- 🌟 **NPTEL Discipline Star 2024** - Academic Excellence
+- 🤖 **NVIDIA** - Getting Started with AI on Jetson Nano
+- ☁️ **Google Professional Certificate** - Business Intelligence & Python
+- ☕ **Wipro TalentNext** - Java Full Stack
+- 📊 **Infosys Springboard** - Power BI & Data Analytics Foundation
+- ☁️ **AWS Academy** - Cloud Foundations
+- 📡 **NPTEL** - Distributed Systems (Gold + Elite)
 
 
 <br/>
@@ -187,6 +187,6 @@ Hardware-software system for remote home appliance control via Android app and I
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3460,50:16213e,100:1a1a2e&height=120&section=footer"/>
 
-*"Data is the new soil — cultivate it well."* 🌱
+*"Data is the new soil - cultivate it well."* 🌱
 
 </div>
