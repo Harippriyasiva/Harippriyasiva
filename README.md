@@ -33,8 +33,6 @@ I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Bi
 
 <div align="center">
 
-<br/>
-
 **Languages**
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" height="28"/>
@@ -44,7 +42,7 @@ I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Bi
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" height="28"/>
 <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" height="28"/>
 
-<br/><br/>
+<br/>
 
 **Data & AI**
 
@@ -54,7 +52,7 @@ I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Bi
 <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" height="28"/>
 <img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" height="28"/>
 
-<br/><br/>
+<br/>
 
 **BI & Visualization**
 
@@ -62,7 +60,7 @@ I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Bi
 <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" height="28"/>
 <img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" height="28"/>
 
-<br/><br/>
+<br/>
 
 **Tools & Platforms**
 
@@ -166,14 +164,11 @@ Hardware-software system for remote home appliance control via Android app and I
 - ☁️ **AWS Academy** - Cloud Foundations
 - 📡 **NPTEL** - Distributed Systems (Gold + Elite)
 
-
 <br/>
 
 <h2 align="center">🤝 Let's Connect</h2>
 
 <div align="center">
-
-<br/>
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harippriyasivakumar/)
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harippriyasiva@gmail.com)
