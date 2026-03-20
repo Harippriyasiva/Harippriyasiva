@@ -1,52 +1,193 @@
-<h1 align="center">Hi 👋, I'm S.Harippriya</h1>
-<h3 align="center">A passionate Data Analyst from India</h3>
+<div align="center">
 
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=harippriyasiva&label=Profile%20views&color=0e75b6&style=flat" alt="harippriyasiva" /> </p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=Harippriya%20S&fontSize=50&fontColor=e94560&animation=fadeIn&fontAlignY=38&desc=Computer%20Science%20Engineer%20%7C%20Data%20Science%20%7C%20AI%20%7C%20Bioinformatics&descAlignY=58&descSize=16&descColor=a8b2d8"/>
 
-
-<h3 align="center">Connect with me:</h3>
 <p align="center">
-<a href="https://www.linkedin.com/in/harippriyasivakumar/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="harippriyas" height="30" width="40" /></a>
+<img src="https://komarev.com/ghpvc/?username=harippriyasiva&label=Profile%20Views&color=e94560&style=flat-square" alt="Profile Views" />
+&nbsp;&nbsp;
+<img src="https://img.shields.io/github/followers/harippriyasiva?label=Followers&style=flat-square&color=0e75b6" alt="Followers"/>
 </p>
 
-<h3 align="center">Languages and Tools:</h3>
-<p align="center">  
-   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/> </a> <a href="https://www.java.com" target="_blank" rel="noreferrer"> 
-      <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg" alt="css3" width="40" height="40"/> </a>
-      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>  <a href="https://unity.com/" target="_blank" rel="noreferrer"> <img src="https://www.vectorlogo.zone/logos/unity3d/unity3d-icon.svg" alt="unity" width="40" height="40"/> </a>
-<p align="center">
-  <a href="https://www.python.org" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a>
-  <a href="https://www.java.com" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> </a>
-  <a href="https://www.microsoft.com/en-us/microsoft-365/excel" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Microsoft_Excel_2013-2019_logo.svg" alt="excel" width="40" height="40"/> </a>
-  <a href="https://powerbi.microsoft.com/" target="blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" alt="power bi" width="40" height="40"/> </a>
-  <a href="https://www.mysql.com/" target="blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="40" height="40"/>
-  	<a href="https://img.shields.io/badge/Google%20Analytics-E37400?style=for-the-badge&logo=google%20analytics&logoColor=white">
-  </a>
-</p>
-</p>
-
-
-<div align=center>
-   <!-- Section 6 - Github graph -->
-    <h2 align="center"> Github Graph </h2>
-   <img src="https://github-readme-activity-graph.vercel.app/graph?username=harippriyasiva&bg_color=130b10&color=c24cba&line=c59bc2&point=4e3b3b&area=true&hide_border=true">
 </div>
 
-<h3 align=center>
-<a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Times+new+roman&weight=5000&size=28&duration=4000&pause=1000&color=7B1342&background=655CFF00&center=true&vCenter=true&random=false&width=435&lines=A+million+thanks+for+all+your+support;Visit+again!!" alt="Typing SVG" /></a>
-</h3>
+<br/>
 
+<img align="right" alt="coding" width="360" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif"/>
 
-<div align=center>
-   <!-- Section 5 - Github stats -->
-    <h2 align="center"> Stats </h2>
-<br>
-<div align=center>
-  <img width=400 src="https://github-readme-streak-stats-salesp07.vercel.app/?user=Harippriyasiva&count_private=true&theme=react&border_radius=10" alt="streak stats"/>
-   <img width=400 src="https://github-readme-stats-salesp07.vercel.app/api?username=Harippriyasiva&count_private=true&show_icons=true&theme=react&rank_icon=github&border_radius=10" alt="readme stats" />
-    <br/>
-  <img width=400 src="https://github-readme-stats.vercel.app/api/top-langs/?username=Harippriyasiva&layout=compact"/>
-  <img width=400  src="https://leetcard.jacoblin.cool/harippriyasiva?theme=dark&font=Antic%20Slab&ext=contest" alt="leetcode stats"> 
+### 👋 Hey there! I'm Harippriya
+
+A Computer Science Engineer with a deep love for **data, patterns, and what they reveal**.  
+I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Biology** — curious about systems at every scale, from environmental sensors to microbial genomes.
+
+- 🔬 Currently working on **novel species identification from extreme environments** using genomics & ML
+- 📊 Experienced in building end-to-end **data pipelines and interactive dashboards**
+- 🌱 Always learning — recently explored **deep learning, phylogenetics, and automated bioinformatics workflows**
+- 🎯 Actively looking for opportunities in **Data Science / Analytics / ML Engineering**
+- ⚡ Fun fact: I can find a story in any dataset — give me one and let's see!
+
+<br clear="right"/>
+
+<br/>
+
+<h2 align="center">🛠️ Tech Stack</h2>
+
+<div align="center">
+
+<br/>
+
+**Languages**
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" height="28"/>
+
+<br/><br/>
+
+**Data & AI**
+
+<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" height="28"/>
+
+<br/><br/>
+
+**BI & Visualization**
+
+<img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" height="28"/>
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" height="28"/>
+
+<br/><br/>
+
+**Tools & Platforms**
+
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/Snakemake-3670A0?style=flat-square&logo=python&logoColor=white" height="28"/>
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=FF9900" height="28"/>
+
 </div>
+
+<br/>
+
+<h2 align="center">🚀 Featured Projects</h2>
+
+<table>
+<tr>
+<td width="50%">
+
+### 🧬 Novel Microbial Species Identification
+Automated bioinformatics pipeline for identifying and characterizing novel microbial species from extreme environments (ISS, ILMAH). Uses phylogenomics, ML-based classification, and metabolic modeling.
+
+`Python` `Snakemake` `GToTree` `IQ-TREE`
+
+</td>
+<td width="50%">
+
+### 🔬 Skin Cancer Detection — Deep Learning
+CNN-based system to classify dermatologic images as Melanoma / Non-Melanoma with **95.4% accuracy**. Analyzed color, texture, size & perimeter features using Flask for deployment.
+
+`Python` `CNN` `TensorFlow` `Flask`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Air Quality Index Dashboard
+Interactive Power BI dashboard visualizing PM2.5, PM10, NOx trends across regions with dynamic filters. Preprocessed datasets in Python and embedded into a Streamlit web app.
+
+`Python` `Power BI` `Streamlit`
+
+</td>
+<td width="50%">
+
+### 🤖 Emotion Detection System
+Multi-modal AI system combining **computer vision, speech processing, and NLP** to detect user emotions in real time with a GUI interface.
+
+`Python` `OpenCV` `NLP` `Deep Learning`
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📈 Crypto Time Series Forecasting
+Forecasting tool for cryptocurrency price prediction using LSTM, ARIMA & Prophet with interactive dashboards.
+
+`Python` `LSTM` `ARIMA` `Prophet`
+
+</td>
+<td width="50%">
+
+### 🏠 IoT Smart Home Automation
+Hardware-software system for remote home appliance control via Android app and IR remote using ESP32 & Arduino. Won 5th prize at SPCon23.
+
+`Arduino` `ESP32` `IoT`
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<h2 align="center">📈 GitHub Stats</h2>
+
+<div align="center">
+
+<br/>
+
+<img width="400" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=Harippriyasiva&count_private=true&theme=tokyonight&border_radius=10" alt="streak stats"/>
+<img width="400" src="https://github-readme-stats-salesp07.vercel.app/api?username=Harippriyasiva&count_private=true&show_icons=true&theme=tokyonight&rank_icon=github&border_radius=10" alt="readme stats"/>
+
+<br/>
+
+<img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Harippriyasiva&layout=compact&theme=tokyonight"/>
+
 </div>
-<hr/>
+
+<br/>
+
+<h2 align="center">🏆 Certifications & Achievements</h2>
+
+<br/>
+
+- 🌟 **NPTEL Discipline Star 2024** — Academic Excellence
+- 🤖 **NVIDIA** — Getting Started with AI on Jetson Nano
+- ☁️ **Google Professional Certificate** — Business Intelligence & Python
+- ☕ **Wipro TalentNext** — Java Full Stack
+- 📊 **Infosys Springboard** — Power BI & Data Analytics Foundation
+- ☁️ **AWS Academy** — Cloud Foundations
+- 📡 **NPTEL** — Distributed Systems (Gold + Elite)
+- 🥉 **3rd Prize** — Augmented Reality Paper Presentation @ Kongunadu Engineering College, Trichy
+- 🏅 **5th Prize** — IoT Smart Home Project @ SPCon23, Muthayammal Engineering College
+
+<br/>
+
+<h2 align="center">🤝 Let's Connect</h2>
+
+<div align="center">
+
+<br/>
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harippriyasivakumar/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harippriyasiva@gmail.com)
+[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/harippriyasiva)
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3460,50:16213e,100:1a1a2e&height=120&section=footer"/>
+
+*"Data is the new soil — cultivate it well."* 🌱
+
+</div>
