@@ -1,187 +1,192 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:16213e,100:0f3460&height=200&section=header&text=Harippriya%20S&fontSize=50&fontColor=e94560&animation=fadeIn&fontAlignY=38&desc=Computer%20Science%20Engineer%20%7C%20Data%20Science%20%7C%20AI%20%7C%20Bioinformatics&descAlignY=58&descSize=16&descColor=a8b2d8"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,25:0f172a,50:312e81,75:4c1d95,100:7c3aed&height=220&section=header&text=Harippriya%20S&fontSize=50&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Computer%20Science%20Engineer%20%7C%20Data%20%E2%80%A2%20Automation%20%E2%80%A2%20AI&descAlignY=60&descSize=15&descColor=c4b5fd" width="100%" alt="Harippriya S Banner" />
 
 <p align="center">
-<img src="https://komarev.com/ghpvc/?username=harippriyasiva&label=Profile%20Views&color=e94560&style=flat-square" alt="Profile Views" />
+<img src="https://komarev.com/ghpvc/?username=harippriyasiva&label=Profile%20Views&color=8b5cf6&style=flat-square" alt="Profile Views"/>
 &nbsp;&nbsp;
-<img src="https://img.shields.io/github/followers/harippriyasiva?label=Followers&style=flat-square&color=0e75b6" alt="Followers"/>
+<img src="https://img.shields.io/github/followers/harippriyasiva?label=Followers&style=flat-square&color=8b5cf6" alt="Followers"/>
+&nbsp;&nbsp;
+<a href="https://drive.google.com/file/d/1JtSAalHp9y--HFYUYuJYI7qNN5-55pnh/view?usp=sharing" target="_blank"><img src="https://img.shields.io/badge/📄%20View%20Resume-f59e0b?style=flat-square&logo=googledrive&logoColor=white" alt="Resume"/></a>
 </p>
 
 </div>
 
-<br/>
+---
 
-<img align="right" alt="coding" width="360" src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif"/>
-
-### 👋 Hey there! I'm Harippriya
-
-A Computer Science Engineer with a deep love for **data, patterns, and what they reveal**.  
-I sit at the intersection of **Data Science**, **AI/ML**, and **Computational Biology** - curious about systems at every scale, from environmental sensors to microbial genomes.
-
-- 🔬 Currently working on **novel species identification from extreme environments** using genomics & ML
-- 📊 Experienced in building end-to-end **data pipelines and interactive dashboards**
-- 🌱 Always learning - recently explored **deep learning, phylogenetics, and automated bioinformatics workflows**
-- 🎯 Actively looking for opportunities in **Data Science / Analytics / ML Engineering**
-- ⚡ Fun fact: I can find a story in any dataset - give me one and let's see!
-
-<br clear="right"/>
-
-<br/>
-
-<h2 align="center">🛠️ Tech Stack</h2>
-
-<div align="center">
-
-**Languages**
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/SQL-4479A1?style=flat-square&logo=mysql&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white" height="28"/>
-
-<br/>
-
-**Data & AI**
-
-<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" height="28"/>
-
-<br/>
-
-**BI & Visualization**
-
-<img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" height="28"/>
-<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" height="28"/>
-
-<br/>
-
-**Tools & Platforms**
-
-<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/Snakemake-3670A0?style=flat-square&logo=python&logoColor=white" height="28"/>
-<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=FF9900" height="28"/>
-
-</div>
-
-<br/>
-
-<h2 align="center">🚀 Featured Projects</h2>
-
-<table>
+<table width="100%" cellspacing="0" cellpadding="0">
 <tr>
-<td width="50%">
+<td valign="top" width="60%">
+<h2>👋 Hi — I'm Harippriya</h2>
+<p><strong>Computer Science Engineer specializing in scalable data pipelines, workflow automation, and applied AI systems.</strong></p>
+<p>I design and build production-ready data architectures that connect raw data, machine learning models, APIs, and cloud automation into reproducible end-to-end solutions.</p>
+<p>During my computational research work at <strong>IIT Madras</strong>, I focused on workflow automation, large-scale data processing, and scientific computing.</p>
 
-### 🧬 Novel Microbial Species Identification
-Automated bioinformatics pipeline for identifying and characterizing novel microbial species from extreme environments (ISS, ILMAH). Uses phylogenomics, ML-based classification, and metabolic modeling.
-
-`Python` `Snakemake` `GToTree` `IQ-TREE`
-
+<table width="100%" style="margin-top: 16px; border-collapse: collapse;">
+<tr>
+<td width="33%" align="center" style="border: 1px solid #7c3aed; padding: 10px; border-radius: 6px;">
+<strong style="color: #0ea5e9; font-size: 13px;">📊 Data</strong><br/><sub style="font-size: 11px;">Collect • Process • Analyze</sub>
 </td>
-<td width="50%">
-
-### 🔬 Skin Cancer Detection - Deep Learning
-CNN-based system to classify dermatologic images as Melanoma / Non-Melanoma with **95.4% accuracy**. Analyzed color, texture, size & perimeter features using Flask for deployment.
-
-`Python` `CNN` `TensorFlow` `Flask`
-
+<td width="33%" align="center" style="border: 1px solid #7c3aed; padding: 10px; border-radius: 6px;">
+<strong style="color: #0ea5e9; font-size: 13px;">⚙️ Automation</strong><br/><sub style="font-size: 11px;">Pipelines • Workflows</sub>
+</td>
+<td width="33%" align="center" style="border: 1px solid #7c3aed; padding: 10px; border-radius: 6px;">
+<strong style="color: #0ea5e9; font-size: 13px;">🤖 AI / ML</strong><br/><sub style="font-size: 11px;">Models • LLMs • Apps</sub>
 </td>
 </tr>
-<tr>
-<td width="50%">
-
-### 📊 Air Quality Index Dashboard
-Interactive Power BI dashboard visualizing PM2.5, PM10, NOx trends across regions with dynamic filters. Preprocessed datasets in Python and embedded into a Streamlit web app.
-
-`Python` `Power BI` `Streamlit`
-
+</table>
 </td>
-<td width="50%">
-
-### 🤖 Emotion Detection System
-Multi-modal AI system combining **computer vision, speech processing, and NLP** to detect user emotions in real time with a GUI interface.
-
-`Python` `OpenCV` `NLP` `Deep Learning`
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### 📈 Crypto Time Series Forecasting
-Forecasting tool for cryptocurrency price prediction using LSTM, ARIMA & Prophet with interactive dashboards.
-
-`Python` `LSTM` `ARIMA` `Prophet`
-
-</td>
-<td width="50%">
-
-### 🏠 IoT Smart Home Automation
-Hardware-software system for remote home appliance control via Android app and IR remote using ESP32 & Arduino. Won 5th prize at SPCon23.
-
-`Arduino` `ESP32` `IoT`
-
+<td valign="top" width="40%" align="right" style="padding-left: 16px;">
+<img src="https://user-images.githubusercontent.com/74038190/229223263-cf2e4b07-2615-4f87-9c38-e37600f8381a.gif" alt="Tech Animation" width="100%" style="border-radius: 8px; object-fit: cover;" />
 </td>
 </tr>
 </table>
 
-<br/>
+---
 
-<h2 align="center">📈 GitHub Stats</h2>
+<h2 align="center">🛠️ Technical Stack</h2>
+
+<table width="100%" style="border: 1px solid #7c3aed; border-radius: 8px; border-collapse: separate; border-spacing: 0;">
+<tr>
+<td align="center" style="padding: 12px; border-bottom: 1px solid #cbd5e1; border-right: 1px solid #cbd5e1;" width="16%">
+<strong>Languages</strong><br/><br/>
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python"/><br/>
+<img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" alt="Java"/><br/>
+<img src="https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white" alt="C"/>
+</td>
+<td align="center" style="padding: 12px; border-bottom: 1px solid #cbd5e1; border-right: 1px solid #cbd5e1;" width="16%">
+<strong>Data & Analytics</strong><br/><br/>
+<img src="https://img.shields.io/badge/Pandas-150458?style=flat-square&logo=pandas&logoColor=white" alt="Pandas"/><br/>
+<img src="https://img.shields.io/badge/NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy"/><br/>
+<img src="https://img.shields.io/badge/Matplotlib-11557C?style=flat-square&logo=matplotlib&logoColor=white" alt="Matplotlib"/><br/>
+<img src="https://img.shields.io/badge/Power%20BI-F2C811?style=flat-square&logo=powerbi&logoColor=black" alt="Power BI"/><br/>
+<img src="https://img.shields.io/badge/Excel-217346?style=flat-square&logo=microsoftexcel&logoColor=white" alt="Excel"/>
+</td>
+<td align="center" style="padding: 12px; border-bottom: 1px solid #cbd5e1; border-right: 1px solid #cbd5e1;" width="17%">
+<strong>ML & AI</strong><br/><br/>
+<img src="https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white" alt="TensorFlow"/><br/>
+<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" alt="PyTorch"/><br/>
+<img src="https://img.shields.io/badge/scikit--learn-F7931E?style=flat-square&logo=scikit-learn&logoColor=white" alt="Scikit-Learn"/><br/>
+<img src="https://img.shields.io/badge/OpenCV-5C3EE8?style=flat-square&logo=opencv&logoColor=white" alt="OpenCV"/><br/>
+<img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=chainlink&logoColor=white" alt="LangChain"/>
+</td>
+<td align="center" style="padding: 12px; border-bottom: 1px solid #cbd5e1; border-right: 1px solid #cbd5e1;" width="17%">
+<strong>Automation & Tools</strong><br/><br/>
+<img src="https://img.shields.io/badge/Snakemake-3670A0?style=flat-square&logo=python&logoColor=white" alt="Snakemake"/><br/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/><br/>
+<img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git"/><br/>
+<img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux"/>
+</td>
+<td align="center" style="padding: 12px; border-bottom: 1px solid #cbd5e1; border-right: 1px solid #cbd5e1;" width="17%">
+<strong>Web & APIs</strong><br/><br/>
+<img src="https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white" alt="Flask"/><br/>
+<img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" alt="Streamlit"/><br/>
+<img src="https://img.shields.io/badge/REST%20API-02569B?style=flat-square&logo=postman&logoColor=white" alt="REST API"/>
+</td>
+<td align="center" style="padding: 12px; border-bottom: 1px solid #cbd5e1;" width="17%">
+<strong>Cloud & IDE</strong><br/><br/>
+<img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=FF9900" alt="AWS"/><br/>
+<img src="https://img.shields.io/badge/Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter"/><br/>
+<img src="https://img.shields.io/badge/VS%20Code-007ACC?style=flat-square&logo=visualstudioeditors&logoColor=white" alt="VS Code"/>
+</td>
+</tr>
+</table>
+
+---
+
+<h2 align="center">🚀 Selected Engineering Projects</h2>
+
+<table width="100%" cellspacing="0" cellpadding="0">
+<tr>
+<td width="50%" valign="top" style="border: 1px solid #7c3aed; padding: 14px; border-radius: 6px;">
+<h4>🧠 AI Research Assistant</h4>
+<p style="font-size: 13px;">
+AI-powered application utilizing RAG architecture and agentic LLM tooling to analyze complex scientific papers, retrieve contextual insights, and automate structured research synthesis.
+</p>
+<p style="font-size: 12px;">
+<code>Python</code> <code>LLMs</code> <code>LangChain</code> <code>RAG</code> <code>APIs</code>
+</p>
+</td>
+<td width="50%" valign="top" style="border: 1px solid #7c3aed; padding: 14px; border-radius: 6px;">
+<h4>⚙️ NOSE — Computational Pipeline</h4>
+<p style="font-size: 13px;">
+Modular, multi-stage Snakemake workflow for automated genomic analysis. Executed large-scale computational processing at IIT Madras, contributing to the identification of 15 candidate novel strains.
+</p>
+<p style="font-size: 12px;">
+<code>Python</code> <code>Snakemake</code> <code>Conda</code> <code>Linux</code> <code>Docker</code>
+</p>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top" style="border: 1px solid #7c3aed; padding: 14px; border-radius: 6px;">
+<h4>📊 NASA / ISS Data Analytics</h4>
+<p style="font-size: 13px;">
+Platform for ingesting, transforming, and visualizing space biology datasets. Focus on robust data processing, analytics pipelines, and dynamic web interfaces.
+</p>
+<p style="font-size: 12px;">
+<code>Python</code> <code>Pandas</code> <code>Power BI</code> <code>Streamlit</code>
+</p>
+</td>
+<td width="50%" valign="top" style="border: 1px solid #7c3aed; padding: 14px; border-radius: 6px;">
+<h4>🔬 Deep Learning Skin Cancer Classifier</h4>
+<p style="font-size: 13px;">
+CNN-based computer vision architecture engineered for feature extraction and image classification, achieving <strong>95.4% accuracy</strong>, served via a Flask backend.
+</p>
+<p style="font-size: 12px;">
+<code>Python</code> <code>TensorFlow</code> <code>CNN</code> <code>Flask</code>
+</p>
+</td>
+</tr>
+</table>
 
 <div align="center">
-
 <br/>
-
-<img width="400" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=Harippriyasiva&count_private=true&theme=tokyonight&border_radius=10" alt="streak stats"/>
-<img width="400" src="https://github-readme-stats-salesp07.vercel.app/api?username=Harippriyasiva&count_private=true&show_icons=true&theme=tokyonight&rank_icon=github&border_radius=10" alt="readme stats"/>
-
-<br/>
-
-<img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Harippriyasiva&layout=compact&theme=tokyonight"/>
-
+<a href="https://github.com/harippriyasiva?tab=repositories">
+<img src="https://img.shields.io/badge/🔗%20View%20More%20Projects%20on%20GitHub-7c3aed?style=for-the-badge&logoColor=white" alt="View More Projects"/>
+</a>
 </div>
 
-<br/>
+---
 
-<h2 align="center">🏆 Certifications & Achievements</h2>
+<h2 align="center">📈 GitHub Engineering Metrics</h2>
 
-<br/>
+<div align="center">
+<img width="48%" src="https://github-readme-streak-stats-salesp07.vercel.app/?user=Harippriyasiva&count_private=true&theme=tokyonight&border_radius=8" alt="streak stats"/>
+<img width="48%" src="https://github-readme-stats-salesp07.vercel.app/api?username=Harippriyasiva&count_private=true&show_icons=true&theme=tokyonight&rank_icon=github&border_radius=8" alt="readme stats"/>
+<br/><br/>
+<img width="420" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Harippriyasiva&layout=compact&theme=tokyonight" alt="Top Languages"/>
+</div>
 
-- 🌟 **NPTEL Discipline Star 2024** - Academic Excellence
-- 🤖 **NVIDIA** - Getting Started with AI on Jetson Nano
-- ☁️ **Google Professional Certificate** - Business Intelligence & Python
-- ☕ **Wipro TalentNext** - Java Full Stack
-- 📊 **Infosys Springboard** - Power BI & Data Analytics Foundation
-- ☁️ **AWS Academy** - Cloud Foundations
-- 📡 **NPTEL** - Distributed Systems (Gold + Elite)
+---
 
-<br/>
+<h2 align="center">🏆 Honors & Certifications</h2>
+
+<div align="center" style="font-size: 15px; line-height: 1.8;">
+🌟 <strong>NPTEL Discipline Star</strong> — Academic Excellence <br><br>
+🤖 <strong>NVIDIA</strong> — Getting Started with AI on Jetson Nano <br><br>
+☁️ <strong>Google Professional Certificate</strong> — Business Intelligence & Python <br><br>
+☕ <strong>Wipro TalentNext</strong> — Java Full Stack Certified <br><br>
+📊 <strong>Infosys Springboard</strong> — Power BI & Data Analytics Foundation <br><br>
+☁️ <strong>AWS Academy</strong> — Cloud Foundations <br><br>
+📡 <strong>NPTEL</strong> — Distributed Systems (Gold + Elite)
+</div>
+
+---
 
 <h2 align="center">🤝 Let's Connect</h2>
 
 <div align="center">
-
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harippriyasivakumar/)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harippriyasiva@gmail.com)
-[![LeetCode](https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](https://leetcode.com/harippriyasiva)
-
+<a href="https://drive.google.com/file/d/1JtSAalHp9y--HFYUYuJYI7qNN5-55pnh/view?usp=sharing" target="_blank"><img src="https://img.shields.io/badge/📄%20View%20Resume-f59e0b?style=for-the-badge&logo=googledrive&logoColor=white" alt="Resume"/></a>
+&nbsp;&nbsp;
+<a href="https://www.linkedin.com/in/harippriyasivakumar/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+&nbsp;&nbsp;
+<a href="mailto:harippriyasiva@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/></a>
+&nbsp;&nbsp;
+<a href="https://leetcode.com/harippriyasiva"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/></a>
 </div>
 
 <br/>
 
 <div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f3460,50:16213e,100:1a1a2e&height=120&section=footer"/>
-
-*"Data is the new soil - cultivate it well."* 🌱
-
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,25:4c1d95,50:312e81,75:0f172a,100:020617&height=120&section=footer" width="100%" alt="Footer Wave" />
 </div>
