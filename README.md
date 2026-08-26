@@ -36,11 +36,12 @@
 </div>
 
 </td>
-<td valign="top" width="40%" align="center" style="padding-top: 20px;">
+<td valign="middle" width="40%" align="center" style="padding-top: 20px;">
 
 <!-- Links directly to your Tech Girl icon.svg file -->
+<p align="center">
 <img src="icon.svg" alt="Tech Girl Animation" width="90%" style="border-radius: 10px;" />
-
+</p>
 </td>
 </tr>
 </table>
