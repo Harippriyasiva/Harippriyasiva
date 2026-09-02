@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harippriya S | Data Engineering, Software Systems & Applied AI</title>
+    <meta name="description" content="Harippriya S. engineers reliable data pipelines, software systems, and applied AI solutions for complex, data-intensive workflows.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* === DYNAMIC CSS VARIABLES (PURE PASTEL THEME) === */
+        :root {
+            --bg-base: #fafafa; 
+            --text-main: #111827; 
+            --text-muted: #6b7280;
+            --border-hard: rgba(17, 24, 39, 0.1);
+            --code-bg: #1f2430; 
+            --code-text: #e2e8f0;
+            --accent: #ec4899; 
+            --gold: #dfb15b;
+            --trust-blue-dark: #0284c7;
+            --card-bg: rgba(255, 255, 255, 0.75);
+            
+            --font-sans: 'Inter', sans-serif;
+            --font-mono: 'Fira Code', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: var(--bg-base);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            overflow: hidden; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* === GLOBAL PASTEL WAVES ANIMATION (BASE LAYER) === */
+        .bg-layer {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            z-index: 0; pointer-events: none;
+        }
+        .bg-layer::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, var(--bg-base) 0 34%, rgba(250,250,250,0.78) 45%, transparent 72%);
+        }
+        .wave-container {
+            position: absolute;
+            bottom: -2%;
+            left: 0;
+            width: 100vw;
+            height: 58vh;
+            opacity: 0.86;
+            mask-image: linear-gradient(to top, #000 0 72%, transparent 100%);
+        }
+        .wave-container svg { width: 100%; height: 100%; display: block; }
+        .wave-rect { animation: waveDrift 18s infinite alternate ease-in-out; transform-origin: bottom; }
+        .wave-rect:nth-child(even) { animation-duration: 24s; animation-direction: alternate-reverse; }
+        @keyframes waveDrift { 0% { transform: scaleY(0.78) translateY(12%); opacity: 0.7; } 100% { transform: scaleY(1.08) translateY(-2%); opacity: 1; } }
+
+        /* === TOP MASK TO PREVENT OVERLAP === */
+        .top-mask {
+            position: fixed; top: 0; left: 0; right: 0; height: 110px;
+            background: linear-gradient(to bottom, var(--bg-base) 60%, transparent);
+            z-index: 95; pointer-events: none;
+        }
+
+        /* === HEADER ELEMENTS === */
+        .brand-logo {
+            position: fixed; top: 35px; left: 40px; z-index: 100;
+            font-family: var(--font-mono); font-weight: 800; font-size: 1.5rem;
+            letter-spacing: -1px; color: var(--text-main); cursor: pointer;
+        }
+        .brand-logo span { color: var(--accent); }
+
+        .btn-resume {
+            position: fixed; top: 35px; right: 40px; z-index: 100;
+            background: var(--text-main); color: var(--bg-base); text-decoration: none;
+            padding: 10px 20px; border-radius: 4px; font-family: var(--font-mono);
+            font-weight: 600; font-size: 0.85rem; text-transform: uppercase;
+            transition: 0.2s; border: 1px solid var(--text-main);
+        }
+        .btn-resume:hover { background: transparent; color: var(--text-main); }
+
+        /* === SIDEBARS (STRICT JS BUTTONS) === */
+        .sidebar-left {
+            position: fixed; left: 40px; top: 50%; transform: translateY(-50%);
+            display: flex; flex-direction: column; gap: 56px; z-index: 90;
+        }
+        .sidebar-left button {
+            background: none; border: none; writing-mode: vertical-rl; transform: rotate(180deg);
+            color: var(--text-muted); font-family: var(--font-mono); font-size: 1.05rem;
+            font-weight: 600; letter-spacing: 1px; cursor: pointer; transition: 0.2s; text-transform: uppercase;
+        }
+        .sidebar-left button:hover { color: var(--text-main); }
+        .sidebar-left button.active-link { color: var(--accent); }
+
+        .sidebar-right {
+            position: fixed; right: 40px; top: 50%; transform: translateY(-50%);
+            display: flex; flex-direction: column; gap: 42px; z-index: 90; align-items: center;
+        }
+        .sidebar-right a { color: var(--text-muted); transition: 0.2s; }
+        .sidebar-right a:hover { color: var(--accent); transform: translateX(-3px); }
+        .sidebar-right .side-nav-btn {
+            background: none;
+            border: none;
+            writing-mode: vertical-rl;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            font-size: 1.02rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .sidebar-right .side-nav-btn:hover,
+        .sidebar-right .side-nav-btn.active-link {
+            color: var(--accent);
+            transform: translateX(-3px);
+        }
+        .right-nav-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            padding: 14px 0;
+        }
+        .social-stack {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            padding: 10px 0;
+        }
+        .social-stack svg { width: 24px; height: 24px; }
+        .v-line { width: 1px; height: 60px; background: var(--border-hard); margin-top: 10px; }
+
+        /* === MAIN CONTENT SCROLL AREA === */
+        .main-container {
+            position: absolute; top: 0; left: 104px; right: 104px; height: 100vh;
+            overflow-y: auto; scrollbar-width: none; z-index: 10;
+        }
+        .main-container::-webkit-scrollbar { display: none; }
+
+        .content-wrapper {
+            max-width: 1540px; margin: 0 auto; 
+            padding: 118px 14px 140px; 
+            min-height: 100vh; display: flex; flex-direction: column; justify-content: flex-start;
+        }
+
+        /* === STRICT SPA SECTION TOGGLING (STABLE, ZERO OVERLAP) === */
+        .page-section { 
+            display: none; 
+            flex-direction: column; justify-content: center;
+            min-height: 80vh; position: relative; width: 100%; 
+        }
+
+        /* === SECTION-SPECIFIC AMBIENT BACKGROUNDS === */
+        .page-section::before {
+            content: "";
+            position: absolute;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        #about::before {
+            inset: 2% -5% -6%;
+            background-image:
+                linear-gradient(rgba(56, 189, 248, 0.085) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(236, 72, 153, 0.065) 1px, transparent 1px);
+            background-size: 48px 48px;
+            mask-image: linear-gradient(to bottom, transparent 2%, rgba(0,0,0,0.65) 34%, transparent 92%);
+            -webkit-mask-image: linear-gradient(to bottom, transparent 2%, rgba(0,0,0,0.65) 34%, transparent 92%);
+            opacity: 0.5;
+            animation: aboutGridDrift 22s linear infinite;
+        }
+
+        #projects::before {
+            inset: 8% -7% 2%;
+            background-image:
+                repeating-linear-gradient(0deg, transparent 0 74px, rgba(56, 189, 248, 0.08) 75px, transparent 76px),
+                linear-gradient(90deg, transparent 28%, rgba(125, 211, 252, 0.15) 46%, rgba(244, 114, 182, 0.12) 52%, transparent 72%);
+            background-size: 100% 100%, 230% 100%;
+            mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 18%, #000 82%, transparent);
+            opacity: 0.62;
+            animation: projectDataSweep 14s ease-in-out infinite alternate;
+        }
+
+        #skills::before {
+            inset: 3% -4%;
+            background-image:
+                linear-gradient(90deg, transparent 49.88%, rgba(236, 72, 153, 0.11) 50%, transparent 50.12%),
+                repeating-linear-gradient(135deg, transparent 0 55px, rgba(56, 189, 248, 0.06) 56px, transparent 57px);
+            background-size: 100% 100%, 82px 82px;
+            mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+            -webkit-mask-image: linear-gradient(to bottom, transparent, #000 14%, #000 86%, transparent);
+            opacity: 0.52;
+            animation: experienceRouteDrift 20s linear infinite;
+        }
+
+        #feats::before {
+            inset: 1% -8%;
+            background: linear-gradient(108deg, transparent 34%, rgba(223,177,91,0.10) 44%, rgba(236,72,153,0.07) 50%, rgba(125,211,252,0.10) 56%, transparent 66%);
+            background-size: 230% 100%;
+            mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, #000 20%, #000 80%, transparent);
+            opacity: 0.72;
+            animation: proofLightSweep 15s ease-in-out infinite;
+        }
+
+        @keyframes aboutGridDrift {
+            from { background-position: 0 0, 0 0; }
+            to { background-position: 48px 48px, 48px 48px; }
+        }
+        @keyframes projectDataSweep {
+            from { background-position: 0 0, 110% 0; }
+            to { background-position: 0 0, -110% 0; }
+        }
+        @keyframes experienceRouteDrift {
+            from { background-position: 0 0, 0 0; }
+            to { background-position: 0 0, 82px 82px; }
+        }
+        @keyframes proofLightSweep {
+            0%, 18% { background-position: 115% 0; }
+            82%, 100% { background-position: -115% 0; }
+        }
+
+        /* === STABLE SCREEN BACKGROUND WORD === */
+        .watermark {
+            position: fixed;
+            top: 128px;
+            right: 330px;
+            font-size: clamp(3.6rem, 6vw, 5rem);
+            font-weight: 900;
+            font-family: var(--font-sans);
+            color: rgba(56, 189, 248, 0.34);
+            z-index: 4;
+            pointer-events: none;
+            user-select: none;
+            white-space: nowrap;
+            line-height: 1;
+            transform: none;
+            mix-blend-mode: multiply;
+            opacity: 0;
+            transition: opacity 0.22s ease;
+        }
+        .watermark.visible { opacity: 0.9; }
+        .watermark.about-word {
+            top: 132px;
+            right: 350px;
+        }
+        .watermark.projects-word,
+        .watermark.feats-word {
+            top: 122px;
+            right: 360px;
+            z-index: 7;
+        }
+        #projects .section-header,
+        #feats .section-header {
+            margin-bottom: 52px;
+        }
+        .watermark.contact-word {
+            text-transform: none;
+        }
+
+        .section-header {
+            font-family: var(--font-mono); font-size: 1.2rem; font-weight: 700;
+            text-transform: uppercase; color: var(--text-main); margin-bottom: 40px;
+            display: flex; align-items: center; gap: 15px; letter-spacing: -0.5px;
+            position: relative; z-index: 10; width: 100%;
+        }
+        .section-header::after { content: none; }
+
+        /* === 1. ABOUT SECTION === */
+        #about {
+            justify-content: flex-start;
+            padding-top: 0;
+        }
+        .hero-split {
+            display: flex; align-items: flex-start; justify-content: space-between; gap: clamp(56px, 6vw, 96px); margin-bottom: 20px;
+            position: relative; z-index: 10;
+        }
+        .hero-text { flex: 1.16; max-width: 800px; }
+        .hero-text h1 {
+            font-size: clamp(3rem, 4.25vw, 3.85rem); font-weight: 800; letter-spacing: -2px;
+            margin-bottom: 18px; line-height: 1.06; color: var(--text-main);
+        }
+        .hero-text p {
+            font-size: 1.14rem; color: var(--text-muted); line-height: 1.55; margin-bottom: 24px; max-width: 800px;
+        }
+
+        .terminal {
+            background: var(--code-bg); border-radius: 8px; overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15); font-family: var(--font-mono);
+            max-width: 800px;
+        }
+        .term-header { background: rgba(0,0,0,0.3); padding: 12px 15px; display: flex; gap: 8px; }
+        .term-header span { width: 12px; height: 12px; border-radius: 50%; }
+        .term-header span:nth-child(1) { background: #ff5f56; }
+        .term-header span:nth-child(2) { background: #ffbd2e; }
+        .term-header span:nth-child(3) { background: #27c93f; }
+        .term-body { padding: 22px 28px; color: var(--code-text); font-size: 0.88rem; line-height: 1.48; }
+        .term-body .prompt { color: var(--accent); font-weight: bold; }
+        .term-body .string { color: #a3be8c; }
+        .term-body .array { color: #d08770; }
+        .blink { animation: blinker 1s linear infinite; }
+        @keyframes blinker { 50% { opacity: 0; } }
+
+        /* INTELLIGENT PIPELINE VISUAL */
+        .hero-visual {
+            flex: 0.88; display: flex; justify-content: center; align-items: flex-start; position: relative; min-height: 350px; padding-top: 104px; padding-left: 0;
+        }
+        .click-trigger {
+            display: flex; flex-direction: column; align-items: center; cursor: pointer; transition: transform 0.2s ease;
+        }
+        .click-trigger:hover { transform: scale(1.05); }
+        .ai-architecture {
+            width: min(410px, 78vw);
+            aspect-ratio: 1;
+            position: relative;
+            display: grid;
+            place-items: center;
+            filter: drop-shadow(0 22px 35px rgba(17, 24, 39, 0.12));
+        }
+        .ai-architecture::before {
+            content: "";
+            position: absolute;
+            inset: 12%;
+            border-radius: 50%;
+            background:
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.94) 0 30%, transparent 31%),
+                conic-gradient(from 20deg, rgba(236,72,153,0.25), rgba(125,211,252,0.45), rgba(223,177,91,0.25), rgba(236,72,153,0.25));
+            border: 1px solid rgba(17, 24, 39, 0.08);
+            animation: rotateCore 18s linear infinite;
+        }
+        .ai-core {
+            width: 42%;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background: var(--text-main);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            position: relative;
+            z-index: 3;
+            box-shadow: inset 0 0 0 10px rgba(255,255,255,0.05);
+        }
+        .ai-core span {
+            font-family: var(--font-mono);
+            font-size: 0.76rem;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+        }
+        .ai-node {
+            position: absolute;
+            z-index: 4;
+            width: 104px;
+            padding: 9px 10px;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.84);
+            border: 1px solid var(--border-hard);
+            backdrop-filter: blur(12px);
+            font-family: var(--font-mono);
+            font-size: 0.64rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--text-main);
+            box-shadow: 0 10px 28px rgba(17,24,39,0.08);
+            animation: nodePulse 4.8s ease-in-out infinite;
+        }
+        .node-data { left: 0; top: 25%; }
+        .node-pipeline { right: 0; top: 25%; animation-delay: 0.8s; }
+        .node-model { left: 12%; bottom: 8%; animation-delay: 1.6s; }
+        .node-dashboard { right: 12%; bottom: 8%; animation-delay: 2.4s; }
+        .signal-ring {
+            position: absolute;
+            inset: 4%;
+            border-radius: 50%;
+            border: 1px dashed rgba(17,24,39,0.18);
+            animation: rotateCore 14s linear infinite reverse;
+        }
+        .signal-ring::before,
+        .signal-ring::after {
+            content: "";
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--accent);
+            box-shadow: 0 0 0 8px rgba(236,72,153,0.12);
+        }
+        .signal-ring::before { top: 14%; left: 10%; }
+        .signal-ring::after { right: 11%; bottom: 15%; background: #7dd3fc; box-shadow: 0 0 0 8px rgba(125,211,252,0.16); }
+        .flow-line {
+            position: absolute;
+            z-index: 2;
+            width: 78%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(236,72,153,0.65), rgba(125,211,252,0.75), transparent);
+            transform-origin: center;
+            animation: lineGlow 2.8s ease-in-out infinite;
+        }
+        .flow-line.line-a { transform: rotate(0deg); }
+        .flow-line.line-b { transform: rotate(58deg); animation-delay: 0.5s; }
+        .flow-line.line-c { transform: rotate(-58deg); animation-delay: 1s; }
+        .architecture-caption {
+            position: absolute;
+            bottom: 27%;
+            z-index: 5;
+            font-family: var(--font-mono);
+            font-size: 0.68rem;
+            color: var(--text-muted);
+            letter-spacing: 0.6px;
+            background: rgba(255,255,255,0.62);
+            border: 1px solid var(--border-hard);
+            border-radius: 999px;
+            padding: 5px 10px;
+        }
+        .click-text {
+            margin-top: 20px; font-family: var(--font-mono); font-size: 0.85rem; 
+            color: var(--text-main); font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+            background: rgba(255,255,255,0.5); padding: 6px 16px; border-radius: 50px; border: 1px solid var(--border-hard);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.2s;
+        }
+        .click-trigger:hover .click-text { background: var(--text-main); color: var(--bg-base); border-color: var(--text-main); }
+
+        @keyframes rotateCore { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        @keyframes nodePulse { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+        @keyframes lineGlow { 0%, 100% { opacity: 0.35; } 50% { opacity: 1; } }
+
+        /* === POP-UP MODAL === */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(17, 24, 39, 0.4); backdrop-filter: blur(8px);
+            z-index: 1000; display: none; justify-content: center; align-items: center;
+            opacity: 0; transition: opacity 0.3s ease;
+        }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        .modal-content {
+            background: var(--bg-base); padding: 38px 42px; border-radius: 12px;
+            max-width: 720px; width: 90%; max-height: 88vh; overflow-y: auto; position: relative; border-top: 6px solid #7dd3fc;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15); border: 1px solid var(--border-hard);
+            transform: translateY(20px); transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .close-modal { 
+            position: absolute; top: 15px; right: 20px; background: none; border: none; 
+            font-size: 1.8rem; cursor: pointer; color: var(--text-muted); transition: 0.2s;
+        }
+        .close-modal:hover { color: #0284c7; transform: scale(1.1); }
+
+        /* === 2. PROJECTS SECTION (SWIPE CAROUSEL) === */
+        .projects-shell {
+            position: relative;
+            z-index: 10;
+        }
+        .projects-grid {
+            display: flex;
+            gap: 25px;
+            margin-bottom: 40px;
+            width: 100%;
+            align-items: flex-start;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-snap-type: x mandatory;
+            scroll-padding: 0;
+            padding: 0 0 18px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(236, 72, 153, 0.6) rgba(17, 24, 39, 0.08);
+            position: relative;
+        }
+        .projects-grid::-webkit-scrollbar { height: 8px; }
+        .projects-grid::-webkit-scrollbar-track { background: rgba(17, 24, 39, 0.08); border-radius: 999px; }
+        .projects-grid::-webkit-scrollbar-thumb { background: rgba(236, 72, 153, 0.6); border-radius: 999px; }
+        .projects-grid .sys-card {
+            flex: 0 0 calc((100% - 50px) / 3);
+            min-width: 0;
+            min-height: 455px;
+            scroll-snap-align: start;
+        }
+        .swipe-hint {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 8px;
+            margin: -22px 0 18px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        
+        .sys-card {
+            background: var(--card-bg); backdrop-filter: blur(15px);
+            border: 1px solid var(--border-hard); border-radius: 12px; padding: 28px 30px;
+            display: flex; flex-direction: column; transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .sys-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.08);}
+        
+        .sys-kicker { font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent); text-transform: uppercase; margin-bottom: 8px; font-weight: 600; letter-spacing: 0.5px;}
+        .sys-title { font-size: 1.28rem; font-weight: 700; margin-bottom: 10px; letter-spacing: -0.5px; line-height: 1.25;}
+        
+        .project-links { display: flex; gap: 10px; margin-top: auto; flex-wrap: wrap;}
+        .project-links a { 
+            font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-main); 
+            font-weight: 600; display: flex; align-items: center; gap: 6px; 
+            transition: 0.2s; text-decoration: none; border: 1px solid var(--border-hard);
+            padding: 6px 12px; border-radius: 6px;
+        }
+        .project-links a:hover { border-color: var(--accent); color: var(--accent); }
+        .project-links a.btn-live { background: var(--text-main); color: #fff; border: none; }
+        .project-links a.btn-live:hover { background: var(--accent); transform: translateY(-2px); color: #fff;}
+        .project-links svg { width: 14px; height: 14px; }
+
+        .sys-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 20px; flex-grow: 1; }
+        
+        .tech-array { display: flex; flex-wrap: wrap; gap: 6px; font-family: var(--font-mono); font-size: 0.7rem; margin-bottom: 20px;}
+        .tech-array span { padding: 4px 8px; border: 1px solid var(--border-hard); border-radius: 4px; background: rgba(0,0,0,0.03); color: var(--text-main); font-weight: 600;}
+
+        /* === 3. ROUTE TIMELINE === */
+        .route-timeline { position: relative; max-width: 1200px; margin: 0 auto; padding-top: 20px; z-index: 10; }
+        .route-timeline::after {
+            content: ''; position: absolute; width: 2px; background: var(--border-hard);
+            top: 0; bottom: 0; left: 50%; margin-left: -1px;
+        }
+        .route-item { padding: 10px 40px; position: relative; width: 50%; transition: all 0.3s ease; }
+        .route-item:nth-child(odd) { left: 0; text-align: right; }
+        .route-item:nth-child(even) { left: 50%; text-align: left; }
+        
+        .route-dot {
+            position: absolute; width: 16px; height: 16px; right: -8px;
+            background-color: var(--bg-base); border: 3px solid var(--accent);
+            top: 30px; border-radius: 50%; z-index: 1; transition: all 0.3s ease;
+        }
+        .route-item:nth-child(even) .route-dot { left: -8px; }
+        
+        .route-content {
+            padding: 28px 30px; background: var(--card-bg); backdrop-filter: blur(15px);
+            border: 1px solid var(--border-hard); border-radius: 12px;
+            transition: transform 0.3s, box-shadow 0.3s; text-align: left;
+            display: inline-block; width: 100%;
+        }
+        .route-item:hover .route-content { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-color: var(--accent); }
+        .route-item:hover .route-dot { background: var(--accent); transform: scale(1.3); box-shadow: 0 0 10px rgba(236, 72, 153, 0.4); }
+        
+        .route-date { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .route-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 5px; color: var(--text-main); letter-spacing: -0.5px; }
+        .route-org { font-size: 0.95rem; font-weight: 600; color: var(--text-muted); margin-bottom: 12px; }
+        .route-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; margin: 0;}
+
+        /* EXACT GITHUB TECH STACK VISUALIZATION */
+        .tech-github-grid {
+            display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin-bottom: 40px; margin-top: 30px; position: relative; z-index: 10;
+        }
+        .tech-github-category {
+            background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px;
+            width: 230px; display: flex; flex-direction: column; align-items: center; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        .tech-github-category h4 {
+            color: #c9d1d9; font-size: 0.9rem; margin-bottom: 15px; font-weight: 600;
+            border-bottom: 1px solid #30363d; padding-bottom: 8px; width: 100%; text-align: center;
+        }
+        .tech-badge-gh {
+            display: inline-flex; justify-content: center; align-items: center; gap: 8px;
+            width: 85%; padding: 5px 0; border-radius: 4px; margin-bottom: 8px;
+            font-size: 0.8rem; font-weight: 600; font-family: var(--font-sans); color: #fff;
+        }
+        
+        .bg-py { background: #3776AB; }
+        .bg-java { background: #ED8B00; }
+        .bg-c { background: #00599C; }
+        .bg-js { background: #F7DF1E; color: #000; }
+        .bg-pd { background: #4B0082; } 
+        .bg-np { background: #013243; } 
+        .bg-plt { background: #11557c; } 
+        .bg-pbi { background: #F2C811; color: #000; } 
+        .bg-ex { background: #217346; } 
+        .bg-tf { background: #FF6F00; }
+        .bg-pt { background: #EE4C2C; }
+        .bg-skl { background: #F7931E; color: #000; }
+        .bg-cv { background: #5C3EE8; }
+        .bg-lc { background: #1C3C3C; }
+        .bg-sm { background: #3670A0; }
+        .bg-dk { background: #2496ED; }
+        .bg-aws { background: transparent; color: #FF9900; border: 1px solid #FF9900; }
+        .bg-lx { background: #FCC624; color: #000; }
+        .bg-fk { background: #000; border: 1px solid #30363d; }
+        .bg-st { background: #FF4B4B; }
+        .bg-rest { background: #0096D6; }
+
+        /* === 4. FEATS SECTION === */
+        .feats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-bottom: 50px; position: relative; z-index: 10;}
+        
+        .feat-card {
+            background: var(--card-bg); backdrop-filter: blur(15px); border: 1px solid var(--border-hard);
+            border-radius: 12px; padding: 35px; transition: transform 0.3s ease, box-shadow 0.3s ease; 
+            display: flex; flex-direction: column; text-decoration: none; color: inherit;
+        }
+        .feat-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.05); border-color: var(--accent); }
+        .feat-icon { margin-bottom: 20px; width: 40px; height: 40px; color: var(--accent); }
+        .feat-title { font-size: 1.25rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; letter-spacing: -0.5px; }
+        .feat-org { font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent); margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .feat-desc { font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; flex-grow: 1; margin: 0;}
+
+        /* === 5. CONTACT SECTION === */
+        .contact-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 20px; margin-bottom: 50px; position: relative; z-index: 20;
+        }
+        .ping-card {
+            display: flex; flex-direction: column; align-items: center; padding: 40px 20px;
+            border: 1px solid var(--border-hard); border-radius: 8px; text-decoration: none;
+            color: var(--text-main); background: var(--card-bg); backdrop-filter: blur(15px);
+            transition: 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+        }
+        .ping-card:hover { border-color: var(--accent); background: var(--text-main); color: var(--bg-base); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(0,0,0,0.08);}
+        .ping-card svg { width: 32px; height: 32px; margin-bottom: 15px; }
+        .ping-card span { font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.5px; text-align: center; }
+
+        .ocean-wave-wrapper {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 52vh;
+            min-height: 340px;
+            z-index: 1;
+            pointer-events: none;
+            display: none;
+            overflow: hidden;
+            opacity: 0.96;
+            background: linear-gradient(to bottom, transparent 0 10%, rgba(255,255,255,0.16) 34%, rgba(218,212,255,0.2) 100%);
+            mask-image: linear-gradient(to top, #000 0 76%, rgba(0,0,0,0.84) 86%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to top, #000 0 76%, rgba(0,0,0,0.84) 86%, transparent 100%);
+        }
+
+        #contact.active-section ~ .ocean-wave-wrapper { display: block; }
+
+        .contact-wave-canvas {
+            position: absolute;
+            inset: -4% -2% -10%;
+            width: 104%;
+            height: 114%;
+            filter: saturate(1.08) blur(0.4px);
+        }
+        .wave-sheen {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(112deg, transparent 20%, rgba(255,255,255,0.34) 42%, rgba(255,255,255,0.72) 50%, rgba(255,255,255,0.2) 58%, transparent 80%);
+            background-size: 220% 100%;
+            mix-blend-mode: screen;
+            opacity: 0.72;
+            animation: contactWaveSheen 16s ease-in-out infinite alternate;
+        }
+
+        @keyframes contactWaveSheen {
+            0% { background-position: 100% 0; opacity: 0.48; }
+            100% { background-position: 0 0; opacity: 0.78; }
+        }
+
+        /* === RESPONSIVE RULES === */
+        @media (max-width: 1024px) {
+            .hero-split { flex-direction: column; }
+            .hero-visual { width: 100%; margin-top: 30px; }
+            .projects-grid .sys-card { flex-basis: calc((100% - 25px) / 2); }
+            .watermark,
+            .watermark.projects-word,
+            .watermark.feats-word { top: 122px; right: 170px; font-size: clamp(3.2rem, 6.8vw, 4.4rem); }
+            .watermark.about-word { top: 122px; right: 160px; }
+            .contact-grid { grid-template-columns: repeat(2, 1fr); }
+            .route-timeline::after { left: 31px; }
+            .route-item { width: 100%; padding-left: 70px; padding-right: 0; text-align: left !important; left: 0 !important; }
+            .route-item:nth-child(even) .route-dot, .route-item:nth-child(odd) .route-dot { left: 22px; }
+        }
+        @media (max-width: 768px) {
+            .sidebar-left, .sidebar-right, .top-mask { display: none; }
+            .main-container { left: 0; right: 0; }
+            .content-wrapper { padding: 40px 20px 180px 20px; }
+            .brand-logo { position: relative; top: 0; left: 0; margin-bottom: 20px; text-align: center;}
+            .btn-resume { display: none; }
+            .projects-grid .sys-card { flex-basis: 88%; }
+            .swipe-hint { justify-content: center; margin-top: -8px; }
+            .contact-grid { grid-template-columns: 1fr; }
+
+            .mobile-nav { display: flex; gap: 15px; justify-content: center; margin-bottom: 30px; border-bottom: 1px solid var(--border-hard); padding-bottom: 15px; flex-wrap: wrap;}
+            .mobile-nav button { background: none; border: none; font-family: var(--font-mono); font-weight: 600; color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase;}
+            .mobile-nav button.active-link { color: var(--accent); }
+            
+            .watermark,
+            .watermark.projects-word,
+            .watermark.feats-word { top: 110px; right: 56px; font-size: 2.8rem; }
+            .watermark.about-word { top: 110px; right: 56px; }
+            .watermark.visible { opacity: 0.68; }
+            .ocean-wave-wrapper { height: 48vh; min-height: 300px; }
+            .ai-node { width: 82px; font-size: 0.62rem; }
+        }
+        @media (min-width: 769px) { .mobile-nav { display: none; } }
+        @media (prefers-reduced-motion: reduce) {
+            .wave-rect,
+            .ai-architecture::before,
+            .signal-ring,
+            .ai-node,
+            .flow-line,
+            .wave-sheen,
+            .blink {
+                animation: none;
+            }
+            #about::before,
+            #projects::before,
+            #skills::before,
+            #feats::before {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- GLOBAL BACKGROUND WAVES -->
+    <div class="bg-layer bg-about">
+        <div class="wave-container">
+            <svg viewBox="0 0 1271 599" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="waveGrad" x1="0" y1="1" x2="0" y2="0">
+                        <stop offset="0" stop-color="#b8b5ff"/>
+                        <stop offset="0.28" stop-color="#d4c8ff"/>
+                        <stop offset="0.52" stop-color="#ffd4f1"/>
+                        <stop offset="0.78" stop-color="#ffc6e7"/>
+                        <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+                    </linearGradient>
+                    <filter id="blurFilter" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="54"/>
+                    </filter>
+                </defs>
+                <g filter="url(#blurFilter)">
+                    <rect class="wave-rect" x="0" y="299" width="142" height="300" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="115" y="227" width="142" height="372" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="231" y="159" width="142" height="440" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="346" y="96" width="142" height="503" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="462" y="40" width="142" height="558" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="577" y="0" width="142" height="599" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="693" y="40" width="142" height="558" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="808" y="96" width="142" height="503" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="924" y="159" width="142" height="440" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="1039" y="227" width="142" height="372" fill="url(#waveGrad)"/>
+                    <rect class="wave-rect" x="1155" y="299" width="142" height="300" fill="url(#waveGrad)"/>
+                </g>
+            </svg>
+        </div>
+    </div>
+
+    <!-- UI HEADERS & MASK -->
+    <div class="top-mask"></div>
+    <div class="watermark visible" id="sectionWatermark">ABOUT</div>
+    <div class="brand-logo" onclick="switchSection('about')">harippriya<span>.dev</span></div>
+    <a href="https://drive.google.com/file/d/1JtSAalHp9y--HFYUYuJYI7qNN5-55pnh/view?usp=sharing" target="_blank" class="btn-resume">Resume.pdf</a>
+
+    <!-- FIXED SIDEBARS -->
+    <nav class="sidebar-left">
+        <button class="nav-btn" data-target="skills" onclick="switchSection('skills')">03_Experience</button>
+        <button class="nav-btn" data-target="projects" onclick="switchSection('projects')">02_Projects</button>
+        <button class="nav-btn active-link" data-target="about" onclick="switchSection('about')">01_About</button>
+    </nav>
+
+    <div class="sidebar-right">
+        <div class="right-nav-group">
+            <button class="nav-btn side-nav-btn" data-target="feats" onclick="switchSection('feats')">04_Proof</button>
+        </div>
+        <div class="social-stack">
+            <a href="mailto:harippriyasiva@gmail.com"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+            <a href="https://www.linkedin.com/in/harippriyasivakumar/" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+            <a href="https://github.com/Harippriyasiva" target="_blank"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+        </div>
+        <div class="right-nav-group">
+            <button class="nav-btn side-nav-btn" data-target="contact" onclick="switchSection('contact')">05_Contact</button>
+        </div>
+        <div class="v-line"></div>
+    </div>
+
+    <!-- MAIN SCROLL CONTAINER -->
+    <div class="main-container">
+        <div class="content-wrapper">
+
+            <!-- Mobile Nav -->
+            <div class="mobile-nav">
+                <button class="nav-btn active-link" onclick="switchSection('about')">01</button>
+                <button class="nav-btn" onclick="switchSection('projects')">02</button>
+                <button class="nav-btn" onclick="switchSection('skills')">03</button>
+                <button class="nav-btn" onclick="switchSection('feats')">04</button>
+                <button class="nav-btn" onclick="switchSection('contact')">05</button>
+            </div>
+            
+            <!-- 1. ABOUT SECTION -->
+            <section id="about" class="page-section active-section" style="display: flex;">
+                <div class="hero-split">
+                    <div class="hero-text">
+                        <h1>Data Engineering.<br>Software & AI Systems.</h1>
+                        <p>I turn complex requirements and fragmented datasets into modular pipelines, reproducible software, and decision-ready products, applying AI and LLMs where they add practical value.</p>
+
+                        <div class="terminal">
+                            <div class="term-header"><span></span><span></span><span></span></div>
+                            <div class="term-body">
+                                <span class="prompt">harippriya@sys:~$</span> cat identity.json<br>
+                                {<br>
+                                &nbsp;&nbsp;<span class="string">"name"</span>: <span class="array">"Harippriya Sivakumar"</span>,<br>
+                                &nbsp;&nbsp;<span class="string">"focus"</span>: <span class="array">"Data Engineering · Software Systems · Applied AI"</span>,<br>
+                                &nbsp;&nbsp;<span class="string">"builds"</span>: [<span class="array">"modular pipelines"</span>, <span class="array">"reproducible software"</span>, <span class="array">"usable products"</span>],<br>
+                                &nbsp;&nbsp;<span class="string">"methods"</span>: [<span class="array">"orchestration"</span>, <span class="array">"validation"</span>, <span class="array">"LLM integration"</span>],<br>
+                                &nbsp;&nbsp;<span class="string">"directive"</span>: <span class="array">"Understand. Engineer. Validate. Deliver."</span><br>
+                                }<br>
+                                <span class="prompt">harippriya@sys:~$</span> <span class="blink">_</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual">
+                        <div class="click-trigger" onclick="openModal()">
+                            <div class="ai-architecture" aria-hidden="true">
+                                <div class="flow-line line-a"></div>
+                                <div class="flow-line line-b"></div>
+                                <div class="flow-line line-c"></div>
+                                <div class="signal-ring"></div>
+                                <div class="ai-node node-data">requirements</div>
+                                <div class="ai-node node-pipeline">orchestrate</div>
+                                <div class="ai-node node-model">validate</div>
+                                <div class="ai-node node-dashboard">usable output</div>
+                                <div class="ai-core"><span>SYSTEMS</span></div>
+                                <div class="architecture-caption">engineer · validate · deliver</div>
+                            </div>
+                            <div class="click-text">View Profile</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. UNCAGED GRID PROJECTS SECTION -->
+            <section id="projects" class="page-section">
+                <div class="section-header">02 // PROJECTS</div>
+
+                <div class="projects-shell">
+                <div class="swipe-hint">Swipe <span aria-hidden="true">-></span></div>
+                <div class="projects-grid">
+                    
+                    <div class="sys-card">
+                        <div>
+                            <div class="sys-kicker">IIT Madras × NASA JPL</div>
+                            <h3 class="sys-title">NOSE Modular Research Workflow</h3>
+                        </div>
+                        <p class="sys-desc">Engineered a six-stage Python + Snakemake workflow integrating 20+ standalone tools. Added validation and reproducible Docker, Conda, and Linux execution; published the package on PyPI and adapted it for large-scale IIT Madras × NASA JPL research workflows.</p>
+                        <div class="tech-array">
+                            <span>Python</span><span>Snakemake</span><span>Docker</span><span>Conda</span><span>Pandas</span><span>PyPI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/RamanLab/NOSE" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> NOSE Repo</a>
+                            <a href="https://pypi.org/project/nose-pipeline/" target="_blank" class="btn-live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg> PyPI</a>
+                            <a href="https://ramanlab.github.io/ISS-MT3-Isolates/" target="_blank" class="btn-live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg> Live Dashboard</a>
+                        </div>
+                    </div>
+
+                    <div class="sys-card">
+                        <div>
+                            <div class="sys-kicker">Applied AI · Research Systems</div>
+                            <h3 class="sys-title">LLM-Assisted Research Workflow</h3>
+                        </div>
+                        <p class="sys-desc">Built a document-processing workflow that parses scientific papers, extracts key sections, organizes evidence, and uses LLM-assisted synthesis to produce structured research summaries.</p>
+                        <div class="tech-array">
+                            <span>Python</span><span>NLP</span><span>LLM Integration</span><span>Document Parsing</span><span>Research Synthesis</span>
+                        </div>
+                    </div>
+
+                    <div class="sys-card">
+                        <div>
+                            <div class="sys-kicker">Infosys Springboard</div>
+                            <h3 class="sys-title">Air Quality Index Dashboard</h3>
+                        </div>
+                        <p class="sys-desc">Built an interactive Power BI dashboard over international air-quality datasets, structuring PM2.5, PM10, NOx, CO, and SO2 measures for comparative analysis and clear reporting.</p>
+                        <div class="tech-array">
+                            <span>Power BI</span><span>Data Visualization</span><span>Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://app.powerbi.com/view?r=eyJrIjoiMDllNGM5MmYtZGQyMi00ZjZjLTgwNjYtNDcyZTYzMThkN2MwIiwidCI6IjhmY2JjMTQ3LTRlMGItNGJmNS05NGFiLWJjNTczM2Q0YjhlZCJ9&embedImagePlaceholder=true" target="_blank" class="btn-live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg> Live Dashboard</a>
+                        </div>
+                    </div>
+
+                    <div class="sys-card">
+                        <div>
+                            <div class="sys-kicker">Computer Vision</div>
+                            <h3 class="sys-title">Smart Skin Care</h3>
+                        </div>
+                        <p class="sys-desc">Built and evaluated a CNN-based image-classification pipeline for dermatological images, combining preprocessing, feature extraction, model training, and a usable screening interface.</p>
+                        <div class="tech-array">
+                            <span>TensorFlow</span><span>CNNs</span><span>Deep Learning</span><span>Python</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Harippriyasiva/SkinCancerDetection" target="_blank"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg> GitHub</a>
+                            <a href="https://ijsrem.com/download/smart-skin-care-deep-learning-in-skin-cancer-detection" target="_blank" class="btn-live"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg> Paper</a>
+                        </div>
+                    </div>
+
+                    <div class="sys-card">
+                        <div>
+                            <div class="sys-kicker">Zidio Development</div>
+                            <h3 class="sys-title">Emotion Analysis & Forecasting Tools</h3>
+                        </div>
+                        <p class="sys-desc">Built two applied ML prototypes: a GUI-based emotion analysis tool combining computer vision, speech processing, and NLP, and a cryptocurrency forecasting workflow comparing LSTM, ARIMA, and Prophet outputs.</p>
+                        <div class="tech-array">
+                            <span>Python</span><span>LSTM</span><span>ARIMA</span><span>Prophet</span><span>NLP</span><span>CV</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
+
+            <!-- 3. ROUTE TIMELINE MAP & TECH STACK -->
+            <section id="skills" class="page-section">
+                <div class="section-header">03 // EXPERIENCE_TIMELINE</div>
+                
+                <div class="route-timeline">
+                    <div class="route-item">
+                        <div class="route-dot"></div>
+                        <div class="route-content">
+                            <div class="route-date">Jul 2025 - Aug 2026</div>
+                            <h3 class="route-title">Project Associate</h3>
+                            <div class="route-org">Indian Institute of Technology, Madras</div>
+                            <p class="route-desc">Engineered a modular Python + Snakemake workflow integrating <strong>20+ standalone tools across six independently executable stages</strong>. Built validation and reproducible Docker, Conda, and Linux execution, published the package on PyPI, and supported large-scale IIT Madras × NASA JPL research workflows.</p>
+                        </div>
+                    </div>
+
+                    <div class="route-item">
+                        <div class="route-dot"></div>
+                        <div class="route-content">
+                            <div class="route-date">Jan 2025 - Apr 2025</div>
+                            <h3 class="route-title">Data Science & Analytics Intern</h3>
+                            <div class="route-org">Zidio Development</div>
+                            <p class="route-desc">Built two applied ML prototypes: a GUI-based emotion analysis system combining computer vision, speech processing, and NLP, and a cryptocurrency forecasting workflow comparing LSTM, ARIMA, and Prophet models.</p>
+                        </div>
+                    </div>
+
+                    <div class="route-item">
+                        <div class="route-dot"></div>
+                        <div class="route-content">
+                            <div class="route-date">Dec 2024 - Jan 2025</div>
+                            <h3 class="route-title">Space Program Intern</h3>
+                            <div class="route-org">Agnirva.com Space Community</div>
+                            <p class="route-desc">Completed a 30-course technical program spanning space technology, AI/ML, sustainability, and domain analysis, strengthening my ability to learn and work across unfamiliar interdisciplinary subjects.</p>
+                        </div>
+                    </div>
+
+                    <div class="route-item">
+                        <div class="route-dot"></div>
+                        <div class="route-content">
+                            <div class="route-date">Sep 2024 - Dec 2024</div>
+                            <h3 class="route-title">Data Visualization Project Intern</h3>
+                            <div class="route-org">Infosys Springboard</div>
+                            <p class="route-desc">Structured international air-quality datasets and built an interactive Power BI dashboard for comparative analysis of PM2.5, PM10, NOx, CO, and SO2 indicators.</p>
+                        </div>
+                    </div>
+
+                    <div class="route-item">
+                        <div class="route-dot"></div>
+                        <div class="route-content">
+                            <div class="route-date">2021 - 2025</div>
+                            <h3 class="route-title">B.E. Computer Science Engineering</h3>
+                            <div class="route-org">Muthayammal Engineering College</div>
+                            <p class="route-desc">Completed a B.E. in Computer Science Engineering, alongside the <strong>NPTEL Discipline Star 2024</strong>, <strong>Google Professional Certificate in Business Intelligence</strong>, and Power BI and Tableau coursework.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-header" style="margin-top: 50px;">03.1 // TECH_STACK</div>
+                
+                <div class="tech-github-grid">
+                    <div class="tech-github-category">
+                        <h4>Languages</h4>
+                        <span class="tech-badge-gh bg-py">Python</span>
+                        <span class="tech-badge-gh bg-ex">SQL</span>
+                        <span class="tech-badge-gh bg-java">Java</span>
+                        <span class="tech-badge-gh bg-c">C</span>
+                        <span class="tech-badge-gh bg-js">JavaScript</span>
+                    </div>
+
+                    <div class="tech-github-category">
+                        <h4>Data Engineering</h4>
+                        <span class="tech-badge-gh bg-pd">Pandas</span>
+                        <span class="tech-badge-gh bg-np">NumPy</span>
+                        <span class="tech-badge-gh bg-sm">Snakemake</span>
+                        <span class="tech-badge-gh bg-rest">ETL</span>
+                        <span class="tech-badge-gh bg-plt">Data Validation</span>
+                    </div>
+
+                    <div class="tech-github-category">
+                        <h4>Applied AI</h4>
+                        <span class="tech-badge-gh bg-tf">TensorFlow</span>
+                        <span class="tech-badge-gh bg-pt">PyTorch</span>
+                        <span class="tech-badge-gh bg-skl">scikit-learn</span>
+                        <span class="tech-badge-gh bg-cv">OpenCV</span>
+                        <span class="tech-badge-gh bg-lc">NLP & LLM Integration</span>
+                    </div>
+
+                    <div class="tech-github-category">
+                        <h4>Systems & Delivery</h4>
+                        <span class="tech-badge-gh bg-dk">Docker</span>
+                        <span class="tech-badge-gh bg-sm">Conda</span>
+                        <span class="tech-badge-gh bg-lx">Linux</span>
+                        <span class="tech-badge-gh bg-aws">AWS</span>
+                        <span class="tech-badge-gh bg-rest">Git</span>
+                    </div>
+
+                    <div class="tech-github-category">
+                        <h4>Interfaces & APIs</h4>
+                        <span class="tech-badge-gh bg-fk">Flask</span>
+                        <span class="tech-badge-gh bg-st">Streamlit</span>
+                        <span class="tech-badge-gh bg-rest">REST APIs</span>
+                        <span class="tech-badge-gh bg-pbi">Power BI</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- 4. FEATS SECTION (CLICKABLE LINKS) -->
+            <section id="feats" class="page-section">
+                <div class="section-header">04 // PROOF_&_CREDENTIALS</div>
+
+                <div class="feats-grid">
+                    
+                    <a href="https://pypi.org/project/nose-pipeline/" target="_blank" class="feat-card">
+                        <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        <h3 class="feat-title">NOSE Workflow Package</h3>
+                        <div class="feat-org">Python Package Index (PyPI)</div>
+                        <p class="feat-desc">Engineered and published a six-stage modular workflow integrating 20+ tools. The package reached <strong>6,000+ downloads</strong> within two months of release.</p>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/harippriyasivakumar/" target="_blank" class="feat-card">
+                        <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                        <h3 class="feat-title">NPTEL Discipline Star 2024</h3>
+                        <div class="feat-org">Indian Institute of Technology</div>
+                        <p class="feat-desc">Recognized for consistent performance across advanced engineering coursework, including Gold + Elite status in Distributed Systems.</p>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/harippriyasivakumar/" target="_blank" class="feat-card">
+                        <svg class="feat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 8v4l3 3"></path></svg>
+                        <h3 class="feat-title">Google Professional Certificate</h3>
+                        <div class="feat-org">Google</div>
+                        <p class="feat-desc">Completed Google's Professional Certificate in Business Intelligence, covering data modeling, dashboard design, and analytics workflows.</p>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- 5. PURE CONTACT SECTION -->
+            <section id="contact" class="page-section">
+                <div class="section-header">05 // CONTACT</div>
+
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 50px; position: relative; z-index: 20;">
+                    <a href="mailto:harippriyasiva@gmail.com" class="ping-card" style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px; border: 1px solid var(--border-hard); border-radius: 8px; text-decoration: none; color: var(--text-main); background: var(--card-bg); backdrop-filter: blur(15px); transition: 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.03);" onmouseover="this.style.borderColor='var(--accent)'; this.style.background='var(--text-main)'; this.style.color='var(--bg-base)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border-hard)'; this.style.background='var(--card-bg)'; this.style.color='var(--text-main)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.03)'">
+                        <svg style="width: 32px; height: 32px; margin-bottom: 15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span style="font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.5px; text-align: center;">Email</span>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/harippriyasivakumar/" target="_blank" class="ping-card" style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px; border: 1px solid var(--border-hard); border-radius: 8px; text-decoration: none; color: var(--text-main); background: var(--card-bg); backdrop-filter: blur(15px); transition: 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.03);" onmouseover="this.style.borderColor='var(--accent)'; this.style.background='var(--text-main)'; this.style.color='var(--bg-base)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border-hard)'; this.style.background='var(--card-bg)'; this.style.color='var(--text-main)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.03)'">
+                        <svg style="width: 32px; height: 32px; margin-bottom: 15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        <span style="font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.5px; text-align: center;">LinkedIn</span>
+                    </a>
+
+                    <a href="https://github.com/Harippriyasiva" target="_blank" class="ping-card" style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px; border: 1px solid var(--border-hard); border-radius: 8px; text-decoration: none; color: var(--text-main); background: var(--card-bg); backdrop-filter: blur(15px); transition: 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.03);" onmouseover="this.style.borderColor='var(--accent)'; this.style.background='var(--text-main)'; this.style.color='var(--bg-base)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border-hard)'; this.style.background='var(--card-bg)'; this.style.color='var(--text-main)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.03)'">
+                        <svg style="width: 32px; height: 32px; margin-bottom: 15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        <span style="font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.5px; text-align: center;">GitHub</span>
+                    </a>
+
+                    <a href="https://drive.google.com/file/d/1JtSAalHp9y--HFYUYuJYI7qNN5-55pnh/view?usp=sharing" target="_blank" class="ping-card" style="display: flex; flex-direction: column; align-items: center; padding: 40px 20px; border: 1px solid var(--border-hard); border-radius: 8px; text-decoration: none; color: var(--text-main); background: var(--card-bg); backdrop-filter: blur(15px); transition: 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.03);" onmouseover="this.style.borderColor='var(--accent)'; this.style.background='var(--text-main)'; this.style.color='var(--bg-base)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.08)'" onmouseout="this.style.borderColor='var(--border-hard)'; this.style.background='var(--card-bg)'; this.style.color='var(--text-main)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.03)'">
+                        <svg style="width: 32px; height: 32px; margin-bottom: 15px;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                        <span style="font-family: var(--font-mono); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.5px; text-align: center;">View Resume</span>
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    
+    <!-- FLUID CONTACT WAVES -->
+    <div class="ocean-wave-wrapper">
+        <canvas id="contactWaveCanvas" class="contact-wave-canvas" aria-hidden="true"></canvas>
+        <div class="wave-sheen" aria-hidden="true"></div>
+    </div>
+
+    <!-- CATCHY & TRUSTWORTHY POP-UP MODAL -->
+    <div id="introModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button class="close-modal" onclick="closeModal()">×</button>
+            
+            <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 25px; padding-bottom: 20px; border-bottom: 1px solid var(--border-hard);">
+                <div style="width: 64px; height: 64px; background: linear-gradient(145deg, #e0f2fe, #fce7f3); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(2, 132, 199, 0.22); border: 1px solid rgba(17, 24, 39, 0.08); flex: 0 0 64px;">
+                    <svg viewBox="0 0 80 80" width="58" height="58" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle cx="40" cy="40" r="28" fill="#f8c9d8"/>
+                        <path d="M21 44c2-18 10-27 21-27s18 9 19 27c-7-7-13-10-20-10s-13 3-20 10z" fill="#111827"/>
+                        <circle cx="40" cy="42" r="17" fill="#ffd8c7"/>
+                        <path d="M25 43c-2-5 0-12 5-17 4-4 10-6 16-5 8 1 14 8 15 17-9-7-20-7-36 5z" fill="#111827"/>
+                        <circle cx="33" cy="42" r="5" stroke="#111827" stroke-width="2"/>
+                        <circle cx="47" cy="42" r="5" stroke="#111827" stroke-width="2"/>
+                        <path d="M38 42h4" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M35 52c3 2 7 2 10 0" stroke="#111827" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M58 17h13c3 0 5 2 5 5v7c0 3-2 5-5 5h-5l-5 5v-5h-3c-3 0-5-2-5-5v-7c0-3 2-5 5-5z" fill="#ffffff" stroke="#38bdf8" stroke-width="2"/>
+                        <text x="59" y="29" fill="#ec4899" font-family="Fira Code, monospace" font-size="9" font-weight="700">hi</text>
+                    </svg>
+                </div>
+                <div>
+                    <h2 style="font-family: var(--font-sans); font-weight: 800; font-size: 1.8rem; color: var(--text-main); margin: 0; letter-spacing: -0.5px;">Harippriya S.</h2>
+                    <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Data Engineering · Software Systems · Applied AI</div>
+                </div>
+            </div>
+
+            <p style="color: var(--text-muted); line-height: 1.7; font-size: 1.05rem; margin-bottom: 20px;">
+                I build reliable data and software systems that turn fragmented datasets, repeated workflows, and complex requirements into structured pipelines, usable tools, and decision-ready outputs, with LLM integrations where they add practical value.
+            </p>
+
+            <div style="background: rgba(56, 189, 248, 0.06); border: 1px solid rgba(56, 189, 248, 0.16); border-left: 3px solid var(--trust-blue-dark); border-radius: 8px; padding: 16px 18px;">
+                <span style="color: var(--text-main); font-size: 0.95rem; line-height: 1.6; display: block; font-weight: 600;">Curiosity drives the way I work: I learn new domains, tools, and systems as needed, then use that understanding to build cleaner, more maintainable solutions. My recent NOSE pipeline release reached <strong>6K+ downloads</strong>.</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- STRICT JS DISPLAY TOGGLE -->
+    <script>
+        const sectionWatermarkLabels = {
+            about: 'ABOUT',
+            projects: 'WORK',
+            skills: 'EXPERIENCE',
+            feats: 'PROOF',
+            contact: 'Say Hi..'
+        };
+
+        const contactWaveWrapper = document.querySelector('.ocean-wave-wrapper');
+        const contactWaveCanvas = document.getElementById('contactWaveCanvas');
+        const contactWaveContext = contactWaveCanvas.getContext('2d');
+        const reduceWaveMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        let contactWaveFrame = null;
+        let contactWaveActive = false;
+        let contactWaveWidth = 0;
+        let contactWaveHeight = 0;
+        let contactWaveLastPaint = 0;
+
+        const contactWaveLayers = [
+            { base: 0.24, amp: 18, cycles: 1.45, detail: 3.2, speed: 0.00018, phase: 0.3, top: 'rgba(255,255,255,0.30)', bottom: 'rgba(199,210,254,0.28)', crest: 'rgba(255,255,255,0.58)' },
+            { base: 0.34, amp: 26, cycles: 1.8, detail: 4.1, speed: -0.00014, phase: 1.4, top: 'rgba(186,230,253,0.26)', bottom: 'rgba(129,140,248,0.38)', crest: 'rgba(224,242,254,0.68)' },
+            { base: 0.43, amp: 31, cycles: 1.25, detail: 3.6, speed: 0.00012, phase: 2.5, top: 'rgba(251,207,232,0.32)', bottom: 'rgba(244,114,182,0.30)', crest: 'rgba(253,242,248,0.70)' },
+            { base: 0.53, amp: 35, cycles: 1.7, detail: 4.5, speed: -0.00010, phase: 3.7, top: 'rgba(221,214,254,0.38)', bottom: 'rgba(167,139,250,0.44)', crest: 'rgba(245,243,255,0.72)' },
+            { base: 0.63, amp: 28, cycles: 1.35, detail: 3.9, speed: 0.00015, phase: 4.6, top: 'rgba(255,255,255,0.28)', bottom: 'rgba(196,181,253,0.54)', crest: 'rgba(255,255,255,0.76)' }
+        ];
+
+        function resizeContactWaves() {
+            if (!contactWaveWrapper || contactWaveWrapper.style.display === 'none') return;
+            const bounds = contactWaveWrapper.getBoundingClientRect();
+            const pixelRatio = Math.min(window.devicePixelRatio || 1, 1.5);
+            contactWaveWidth = Math.max(1, bounds.width);
+            contactWaveHeight = Math.max(1, bounds.height);
+            contactWaveCanvas.width = Math.round(contactWaveWidth * pixelRatio);
+            contactWaveCanvas.height = Math.round(contactWaveHeight * pixelRatio);
+            contactWaveContext.setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
+        }
+
+        function contactWaveY(layer, x, time) {
+            const progress = x / contactWaveWidth;
+            const mainWave = Math.sin(progress * Math.PI * 2 * layer.cycles + time * layer.speed + layer.phase);
+            const detailWave = Math.sin(progress * Math.PI * 2 * layer.detail - time * layer.speed * 0.72 + layer.phase * 1.7);
+            const longSwell = Math.sin(progress * Math.PI * 0.85 + time * layer.speed * 0.38 + layer.phase);
+            return contactWaveHeight * layer.base + mainWave * layer.amp + detailWave * layer.amp * 0.24 + longSwell * layer.amp * 0.36;
+        }
+
+        function traceContactWave(layer, time, closeShape) {
+            contactWaveContext.beginPath();
+            for (let x = 0; x <= contactWaveWidth + 12; x += 12) {
+                const y = contactWaveY(layer, x, time);
+                if (x === 0) contactWaveContext.moveTo(x, y);
+                else contactWaveContext.lineTo(x, y);
+            }
+            if (closeShape) {
+                contactWaveContext.lineTo(contactWaveWidth, contactWaveHeight);
+                contactWaveContext.lineTo(0, contactWaveHeight);
+                contactWaveContext.closePath();
+            }
+        }
+
+        function paintContactWaves(time = 0) {
+            if (!contactWaveActive || !contactWaveWidth || !contactWaveHeight) return;
+            if (!reduceWaveMotion.matches && time - contactWaveLastPaint < 32) {
+                contactWaveFrame = requestAnimationFrame(paintContactWaves);
+                return;
+            }
+            contactWaveLastPaint = time;
+            contactWaveContext.clearRect(0, 0, contactWaveWidth, contactWaveHeight);
+
+            const baseWash = contactWaveContext.createLinearGradient(0, 0, 0, contactWaveHeight);
+            baseWash.addColorStop(0, 'rgba(255,255,255,0)');
+            baseWash.addColorStop(0.42, 'rgba(252,231,243,0.10)');
+            baseWash.addColorStop(1, 'rgba(196,181,253,0.34)');
+            contactWaveContext.fillStyle = baseWash;
+            contactWaveContext.fillRect(0, 0, contactWaveWidth, contactWaveHeight);
+
+            contactWaveLayers.forEach((layer, index) => {
+                traceContactWave(layer, time, true);
+                const fill = contactWaveContext.createLinearGradient(0, contactWaveHeight * layer.base - layer.amp * 2, 0, contactWaveHeight);
+                fill.addColorStop(0, layer.top);
+                fill.addColorStop(0.34, layer.bottom);
+                fill.addColorStop(1, index % 2 === 0 ? 'rgba(168,162,255,0.48)' : 'rgba(244,180,228,0.42)');
+                contactWaveContext.fillStyle = fill;
+                contactWaveContext.fill();
+
+                traceContactWave(layer, time, false);
+                contactWaveContext.save();
+                contactWaveContext.globalCompositeOperation = 'screen';
+                contactWaveContext.strokeStyle = layer.crest;
+                contactWaveContext.lineWidth = index < 2 ? 1.2 : 1.8;
+                contactWaveContext.shadowColor = layer.crest;
+                contactWaveContext.shadowBlur = 12;
+                contactWaveContext.stroke();
+                contactWaveContext.restore();
+            });
+
+            if (!reduceWaveMotion.matches) contactWaveFrame = requestAnimationFrame(paintContactWaves);
+        }
+
+        function startContactWaves() {
+            contactWaveActive = true;
+            if (contactWaveFrame) cancelAnimationFrame(contactWaveFrame);
+            resizeContactWaves();
+            paintContactWaves(performance.now());
+        }
+
+        function stopContactWaves() {
+            contactWaveActive = false;
+            if (contactWaveFrame) cancelAnimationFrame(contactWaveFrame);
+            contactWaveFrame = null;
+        }
+
+        window.addEventListener('resize', () => {
+            if (!contactWaveActive) return;
+            resizeContactWaves();
+            if (reduceWaveMotion.matches) paintContactWaves(performance.now());
+        });
+
+        function switchSection(sectionId) {
+            // 1. Instantly hide all sections
+            document.querySelectorAll('.page-section').forEach(section => {
+                section.classList.remove('active-section');
+                section.style.display = 'none';
+            });
+            
+            // 2. Hide waves by default
+            stopContactWaves();
+            contactWaveWrapper.style.display = 'none';
+            
+            // 3. Render only the clicked section instantly (No cascade jumping)
+            const activeSec = document.getElementById(sectionId);
+            activeSec.style.display = 'flex';
+            activeSec.classList.add('active-section');
+
+            const watermark = document.getElementById('sectionWatermark');
+            watermark.textContent = sectionWatermarkLabels[sectionId] || '';
+            watermark.className = `watermark visible ${sectionId}-word`;
+
+            // 4. Reveal waves ONLY on the Contact page
+            if(sectionId === 'contact') {
+                contactWaveWrapper.style.display = 'block';
+                startContactWaves();
+            }
+
+            // 5. Update UI Sidebar Links
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active-link');
+            });
+            document.querySelectorAll(`.nav-btn[onclick="switchSection('${sectionId}')"]`).forEach(btn => {
+                btn.classList.add('active-link');
+            });
+
+            // 6. Reset scroll to absolute top with zero lag
+            document.querySelector('.main-container').scrollTo(0, 0);
+        }
+
+        // Modal Functions
+        function openModal() {
+            const modal = document.getElementById('introModal');
+            modal.style.display = 'flex';
+            setTimeout(() => { modal.classList.add('active'); }, 10);
+        }
+        function closeModal(e) {
+            if (e && e.target !== document.getElementById('introModal') && e.target.className !== 'close-modal') return;
+            const modal = document.getElementById('introModal');
+            modal.classList.remove('active');
+            setTimeout(() => { modal.style.display = 'none'; }, 300);
+        }
+    </script>
+
+</body>
+</html>
