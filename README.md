@@ -28,6 +28,8 @@
 * 🔬 **Previously worked with:** Computational research at **IIT Madras**, processing large-scale NASA/ISS datasets and building Snakemake pipelines.
 * ⚡ **Fun Fact:** I can find a story in any dataset—give me one and let's see!
 * 📄 **Resume:** <a href="https://drive.google.com/file/d/1JtSAalHp9y--HFYUYuJYI7qNN5-55pnh/view?usp=sharing" target="_blank">View my official resume here</a>
+* 📄 **Website:** <a href="https://harippriyasiva.github.io/Harippriyasiva/" target="_blank"> https://harippriyasiva.github.io/Harippriyasiva/ </a>
+
 
 <br/>
 <div align="left">
