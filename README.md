@@ -162,7 +162,7 @@ Discover papers on arXiv, retrieve relevant passages from PDFs, and inspect page
 Modular, multi-stage Snakemake workflow for automated genomic analysis. Executed large-scale computational processing at IIT Madras, contributing to the identification of 15 candidate novel strains.
 </p>
 <p style="font-size: 12px;">
-<code>Python</code> <code>Snakemake</code> <code>Conda</code> <code>Linux</code> <code>Docker</code>
+<code>Python</code> <code>Snakemake</code> <code>Conda</code> <code>Linux</code> <code>Docker</code><br/><a href="https://pypi.org/project/nose-pipeline/">View published package ↗</a>
 </p>
 </td>
 </tr>
@@ -173,7 +173,7 @@ Modular, multi-stage Snakemake workflow for automated genomic analysis. Executed
 Platform for ingesting, transforming, and visualizing space biology datasets. Focus on robust data processing, analytics pipelines, and dynamic web interfaces.
 </p>
 <p style="font-size: 12px;">
-<code>Python</code> <code>Pandas</code> <code>Power BI</code> <code>Streamlit</code>
+<code>Python</code> <code>Pandas</code> <code>Power BI</code> <code>Streamlit</code><br/><a href="https://github.com/Harippriyasiva/IITM-NASA-ISS-Project">View project ↗</a>
 </p>
 </td>
 <td width="50%" valign="top" style="border: 1px solid #374151; padding: 14px; border-radius: 6px;">
@@ -182,7 +182,7 @@ Platform for ingesting, transforming, and visualizing space biology datasets. Fo
 CNN-based computer vision architecture engineered for feature extraction and image classification, achieving <strong>95.4% accuracy</strong>, served via a Flask backend.
 </p>
 <p style="font-size: 12px;">
-<code>Python</code> <code>TensorFlow</code> <code>CNN</code> <code>Flask</code>
+<code>Python</code> <code>TensorFlow</code> <code>CNN</code> <code>Flask</code><br/><a href="https://github.com/Harippriyasiva/SkinCancerDetection">View source ↗</a>
 </p>
 </td>
 </tr>
