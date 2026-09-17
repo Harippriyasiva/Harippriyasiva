@@ -147,13 +147,14 @@ TensorFlow, OpenCV, LangChain, API Integrations, Scikit-Learn
 <table width="100%" cellspacing="0" cellpadding="0">
 <tr>
 <td width="50%" valign="top" style="border: 1px solid #374151; padding: 14px; border-radius: 6px;">
-<h4 style="color: #ec4899;">🧠 AI Research Assistant</h4>
+<h4 style="color: #ec4899;">🧠 PaperIntel — Research Paper Reader</h4>
 <p style="font-size: 13px;">
-AI-powered application utilizing RAG architecture and agentic LLM tooling to analyze complex scientific papers, retrieve contextual insights, and automate structured research synthesis.
+Discover papers on arXiv, retrieve relevant passages from PDFs, and inspect page-linked citations. Optional AI answers are available when a model service is configured.
 </p>
 <p style="font-size: 12px;">
-<code>Python</code> <code>LLMs</code> <code>LangChain</code> <code>RAG</code> <code>APIs</code>
+<code>Python</code> <code>Streamlit</code> <code>RAG</code> <code>FAISS</code>
 </p>
+<p style="font-size: 12px;"><a href="https://paperintel-haripriya.streamlit.app/">Try the live app ↗</a> · <a href="https://github.com/Harippriyasiva/PaperIntel">View source ↗</a></p>
 </td>
 <td width="50%" valign="top" style="border: 1px solid #374151; padding: 14px; border-radius: 6px;">
 <h4 style="color: #ec4899;">⚙️ NOSE — Computational Pipeline</h4>
@@ -236,4 +237,3 @@ CNN-based computer vision architecture engineered for feature extraction and ima
 <div align="center">
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:4b5563,100:EC4899&height=120&section=footer" width="100%" alt="Footer Wave" />
 </div>
-
