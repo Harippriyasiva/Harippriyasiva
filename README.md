@@ -23,7 +23,8 @@
 ### Hi there 👋 It's me Harippriya
 
 **Computer Science Engineer** passionate about designing systems that turn raw data and complex workflows into reproducible, automated solutions.
-
+*   **Open-source contribution — NOSE:** Developed a Python and Snakemake pipeline for reproducible genomic analysis at **IIT Madras**, published on **PyPI**. [Published Package](https://pypi.org/project/nose-pipeline/) · [Documentation](https://ramanlab.github.io/NOSE/)
+*   **Featured AI project — PaperIntel:** Built and deployed a **RAG-based research assistant** to discover arXiv papers and retrieve relevant passages from research PDFs. [Try PaperIntel](https://paperintel-haripriya.streamlit.app/) · [GitHub](https://github.com/Harippriyasiva/PaperIntel)
 *   **Currently focusing on:** Scalable data pipelines, AI integrations (RAG/LLMs), and workflow automation.
 *   **Previously worked with:** Computational research at **IIT Madras**, processing large-scale NASA/ISS datasets and building Snakemake pipelines.
 *   **Fun Fact:** I can find a story in any dataset—give me one and let's see!
